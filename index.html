@@ -429,6 +429,7 @@ nav .fa-solid{
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fa-solid fa-circle-xmark" onclick="closemenu()" ></i>
             </ul>
@@ -603,6 +604,143 @@ nav .fa-solid{
         </div>
     </div>
     <br><br>
+
+<!-- Certificates kea liy-->
+<h1 class="sub-title"  > My Certificates</h1>
+<style>
+    
+
+/* Section styling */
+#certificates {
+text-align: center;
+padding: 50px;
+background-color:#080808;
+}
+
+/* Certificate grid styling */
+.certificates-container {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+/* Individual certificate styling */
+.certificate {
+position: relative;
+overflow: hidden;
+width: 200px;
+height: 280px;
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+
+.certificate img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.certificate:hover {
+transform: scale(1.10);
+}
+
+.certificate:hover img {
+opacity: 0.8;
+filter: blur(2px);
+
+}
+
+/* Lightbox styling */
+#lightbox {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+justify-content: center;
+align-items: center;
+}
+
+.lightbox-img {
+max-width: 90%;
+max-height: 80%;
+border-radius: 10px;
+}
+
+/* Close button */
+.close {
+position: absolute;
+top: 20px;
+right: 30px;
+font-size: 30px;
+color: #ffffff;
+cursor: pointer;
+}
+
+</style>
+
+</head>
+<body>
+<section id="certificates">
+    <h2>My Certificates</h2>
+    <div class="certificates-container">
+        <!-- Add your certificate images here -->
+        <div class="certificate">
+            <img src="Certificates 1.png" alt="Certificate 1" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="Certificates 2.png" alt="Certificate 2" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="Certificates 3.png" alt="Certificate 3" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="Certificates 4.png" alt="Certificate 3" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="certificates 5.jfif" alt="Certificate 3" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="intern 1.jfif" alt="Certificate 3" onclick="openLightbox(this)">
+        </div>
+        <div class="certificate">
+            <img src="intern 2.jpeg" alt="Certificate 3" onclick="openLightbox(this)">
+        </div>
+    
+        <!-- Add more certificates as needed -->
+    </div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightboxImg">
+</div>
+
+<script>
+    // Open lightbox with selected certificate
+function openLightbox(imgElement) {
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+lightboxImg.src = imgElement.src;
+lightbox.style.display = "flex";
+}
+
+// Close lightbox
+function closeLightbox() {
+const lightbox = document.getElementById("lightbox");
+lightbox.style.display = "none";
+}
+
+</script>
+
+
+
+
 
 <!-- contact kea liy-->
  <div id="contact">
